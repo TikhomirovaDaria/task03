@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regular expressions1", "Regular expressions\Regular expressions1.csproj", "{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overloading methods", "Overloading methods\Overloading methods.csproj", "{F2BE39D6-D2BE-46E0-A670-32B70311A721}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Overloading operators", "Overloading operators\Overloading operators.csproj", "{C614B611-111B-4A07-8DE9-D90F2AC5547D}"
@@ -11,16 +9,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extension methods", "Extens
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regular expressions2", "Regular expressions2\Regular expressions2.csproj", "{AB8655C7-C58A-4C0C-B5B8-ED2D1ED7F9C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Regular expressions1", "Regular expressions1\Regular expressions1.csproj", "{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F2BE39D6-D2BE-46E0-A670-32B70311A721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F2BE39D6-D2BE-46E0-A670-32B70311A721}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2BE39D6-D2BE-46E0-A670-32B70311A721}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -37,6 +33,10 @@ Global
 		{AB8655C7-C58A-4C0C-B5B8-ED2D1ED7F9C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB8655C7-C58A-4C0C-B5B8-ED2D1ED7F9C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB8655C7-C58A-4C0C-B5B8-ED2D1ED7F9C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE453D1-03AB-4067-80A6-2A7E8F4B837E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
