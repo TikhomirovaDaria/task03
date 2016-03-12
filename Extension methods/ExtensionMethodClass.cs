@@ -8,7 +8,7 @@ namespace Extension_methods
 {
 	static class ExtensionMethodClass
 	{
-		public static string IListToString<T>(this IList<T> element)
+		public static string CollectionToString<T>(this IList<T> element)
 		{
 			StringBuilder result = new StringBuilder();
 
