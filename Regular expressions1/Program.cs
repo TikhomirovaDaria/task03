@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+// Не могли бы Вы, пожалуйста, уточнить, что плохо со строками?
+// На что мне надо обратить внимание, над чем думать?
+
 namespace Regular_expressions1
 {
 	class Program
@@ -16,11 +19,11 @@ namespace Regular_expressions1
 			while (true)
 			{
 				Console.Clear();
-				Console.Write("Press:\n" +
-								  "1 to add logins by yoursels\n" +
-								  "2 to get logins out of file\n" +
-								  "0 to exit\n\n" +
-								  "Your choice: ");
+				Console.Write(string.Format("Press:\n {0} {1} {2} {3}",
+								  "1 to add logins by yoursels\n",
+								  "2 to get logins out of file\n",
+								  "0 to exit\n\n",
+								  "Your choice: "));
 
 				switch (Console.ReadKey().KeyChar)
 				{

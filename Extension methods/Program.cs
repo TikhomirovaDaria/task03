@@ -15,9 +15,9 @@ namespace Extension_methods
 			double[] doubleArr = new double[number];
 
 			for (int i = 0; i < number; i++)
-				Input("doubleArr[" + i + "]", ref doubleArr[i]);
+				Input(string.Format("doubleArr[{0}]", i), ref doubleArr[i]);
 			
-			Console.WriteLine(doubleArr.IListToString());
+			Console.WriteLine(doubleArr.CollectionToString());
 			Console.ReadKey();
 		}
 
