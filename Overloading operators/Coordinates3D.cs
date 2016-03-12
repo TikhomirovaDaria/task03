@@ -27,7 +27,7 @@ namespace Overloading_operators
 
 		public string ToString()
 		{
-			return "(" + x + "," + y + "," + z + ")";
+			return string.Format("{0}, {1}, {2})", x, y, z);
 		}
 
 		public static Coordinates3D operator +(Coordinates3D d1, Coordinates3D d2)
