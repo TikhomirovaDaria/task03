@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
+// Не могли бы Вы, пожалуйста, уточнить, что плохо со строками?
+// На что мне надо обратить внимание, над чем думать?
+
 namespace Regular_expressions1
 {
 	class Program
