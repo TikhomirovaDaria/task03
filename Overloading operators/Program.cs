@@ -22,16 +22,14 @@ namespace Overloading_operators
 
 			Coordinates3D dot1 = new Coordinates3D(inputCoord[0, 0], inputCoord[0, 1], inputCoord[0, 2]);
 			Coordinates3D dot2 = new Coordinates3D(inputCoord[1, 0], inputCoord[1, 1], inputCoord[1, 2]);
-			Coordinates3D dot3 = dot1 + dot2;
-			Coordinates3D dot4 = dot1 - dot2;
 
 			Console.Clear();
-			dot1.Print("DOT 1");
-			dot2.Print("DOT 2");
-			dot3.Print("DOT 3 = DOT 1 + DOT 2");
-			dot4.Print("DOT 4 = DOT 1 - DOT 2");
+			Console.WriteLine("DOT 1 = " + dot1.ToString());
+			Console.WriteLine("DOT 2 = " + dot2.ToString());
+			Console.WriteLine("DOT 3 = DOT 1 + DOT 2 = " + (dot1+dot2).ToString());
+			Console.WriteLine("DOT 4 = DOT 1 - DOT 2 = " + (dot1 - dot2).ToString());
+			
 			Console.ReadKey();
-
 		}
 
 		static int Input(string text)
@@ -41,56 +39,10 @@ namespace Overloading_operators
 			while (true)
 			{
 				Console.Write(text + ": ");
-				try
-				{
-					input = int.Parse(Console.ReadLine());
+				if (Int32.TryParse(Console.ReadLine(), out input))
 					return input;
-				}
-				catch (FormatException)
-				{
-					Console.WriteLine("Wrong input. Try again\n");
-				}
+				Console.WriteLine("Wrong input. Try again\n");
 			}
 		}
-	}
-
-	class Coordinates3D
-	{
-		int x;
-		int y;
-		int z;
-
-		public Coordinates3D()
-		{
-			x = 0;
-			y = 0;
-			z = 0;
-		}
-		public Coordinates3D(int x, int y, int z)
-		{
-			this.x = x;
-			this.y = y;
-			this.z = z;
-		}
-
-		public void Print(string text) 
-		{
-			Console.WriteLine(text + "\n");
-			Console.WriteLine(	"x = " + x);
-			Console.WriteLine(	"y = " + y);
-			Console.WriteLine(	"z = " + z);
-			Console.WriteLine("\n\n");
-		}
-		
-
-		public static Coordinates3D operator +(Coordinates3D d1, Coordinates3D d2)
-		{
-			return new Coordinates3D(d1.x + d2.x, d1.y + d2.y, d1.z + d2.z);
-		}
-		public static Coordinates3D operator -(Coordinates3D d1, Coordinates3D d2)
-		{
-			return new Coordinates3D(d1.x - d2.x, d1.y - d2.y, d1.z - d2.z);
-		}
-
 	}
 }

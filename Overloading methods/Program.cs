@@ -32,15 +32,9 @@ namespace Overloading_methods
 			while (true)
 			{
 				Console.Write(text + ": ");
-				try
-				{
-					intX = int.Parse(Console.ReadLine());
+				if(Int32.TryParse(Console.ReadLine(), out intX))
 					break;
-				}
-				catch (FormatException)
-				{
-					Console.WriteLine("Wrong input. Try again\n");
-				}
+				Console.WriteLine("Wrong input. Try again\n");
 			}
 		}
 		static public void Input(string text, ref double doubleX)
@@ -48,15 +42,9 @@ namespace Overloading_methods
 			while (true)
 			{
 				Console.Write(text + ": ");
-				try
-				{
-					doubleX = double.Parse(Console.ReadLine());
+				if (Double.TryParse(Console.ReadLine(), out doubleX))
 					break;
-				}
-				catch (FormatException)
-				{
-					Console.WriteLine("Wrong input. Try again\n");
-				}
+				Console.WriteLine("Wrong input. Try again\n");
 			}
 		}
 		static public void Input(string text, ref long longX)
@@ -64,33 +52,27 @@ namespace Overloading_methods
 			while (true)
 			{
 				Console.Write(text + ": ");
-				try
-				{
-					longX = long.Parse(Console.ReadLine());
+				if (long.TryParse(Console.ReadLine(), out longX))
 					break;
-				}
-				catch (FormatException)
-				{
-					Console.WriteLine("Wrong input. Try again\n");
-				}
+				Console.WriteLine("Wrong input. Try again\n");
 			}
 		}
 
 		static public int Module (int val){
 			if (val < 0)
-				return val * (-1);
+				return -val;
 			return val;
 		}
 		static public double Module(double val)
 		{
 			if (val < 0)
-				return val * (-1);
+				return -val;
 			return val;
 		}
 		static public long Module(long val)
 		{
 			if (val < 0)
-				return val * (-1);
+				return -val;
 			return val;
 		}
 	}

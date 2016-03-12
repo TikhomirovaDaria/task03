@@ -11,14 +11,9 @@ namespace Regular_expressions2
 	{
 		static void Main(string[] args)
 		{
-			// как понимать "однокоренные"? Мы не можем распознать, существует реально ли заданное слово или нет
-			// сделала единтвенным ограничением цифры, т.е., например, "9металл" или "меллический19328" - не подойдут
-
-			Regex metallMask = new Regex(@"\b[\w-[\d]]*([мМ][еЕ][тТ][аА][лЛ][лЛ])[\w-[\d]]*\b");
-			string text;
-
-			Console.Write("Enter text: ");
-			text = Console.ReadLine();
+			Regex metallMask = new Regex(@"\b[-\w]*(металл)[-\w]*\b", RegexOptions.IgnoreCase);
+			System.IO.StreamReader file = new System.IO.StreamReader(@"../../Metall.txt", Encoding.Default);
+			string text = file.ReadToEnd();
 
 			Match foundWords = metallMask.Match(text);
 
