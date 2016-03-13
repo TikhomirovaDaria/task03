@@ -7,6 +7,10 @@ using System.Text.RegularExpressions;
 
 namespace Regular_expressions2
 {
+	/// <summary>
+	/// Поиск в исходном тексте слова «металл» и его однокоренных слов,
+	/// а также их вывод на консоль.
+	/// </summary>
 	class Program
 	{
 		static void Main(string[] args)

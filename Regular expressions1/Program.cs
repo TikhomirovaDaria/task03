@@ -49,6 +49,10 @@ namespace Regular_expressions1
 			}
 		}
 
+		/// <summary>
+		/// Пльзовательский ввод логинов с консоли и проверка корректности
+		/// </summary>
+		/// <param name="loginMask"></param>
 		static void UserInput(Regex loginMask)
 		{
 			Console.Clear();
@@ -70,6 +74,10 @@ namespace Regular_expressions1
 			} while (Console.ReadKey().Key != ConsoleKey.Escape);
 
 		}
+		/// <summary>
+		/// Считывание логинов из файла Login.txt для проверка их корректности
+		/// </summary>
+		/// <param name="loginMask"></param>
 		static void FileInput(Regex loginMask)
 		{
 			Console.Clear();
@@ -94,6 +102,11 @@ namespace Regular_expressions1
 
 			Console.ReadKey();
 		}
+		/// <summary>
+		/// Вывод на консоль строки text цветом color
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="color"></param>
 		static void PrintColorText(string text, ConsoleColor color)
 		{
 			Console.ForegroundColor = color;
