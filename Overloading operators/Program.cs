@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace Overloading_operators
 {
+	/// <summary>
+	/// Организует работу экземплярами класса <see = cref "Coordinates3D"/> 
+	/// Вывдит результаты работы переруженных операторов сложения и вычитания
+	/// </summary>
 	class Program
 	{
 		static void Main(string[] args)
@@ -32,6 +36,10 @@ namespace Overloading_operators
 			Console.ReadKey();
 		}
 
+		/// <summary>
+		/// Безопаснй ввод с консоли числа типа int
+		/// </summary>
+		/// <param name="text">Используется в качестве приглашения для ввода</param>
 		static int Input(string text)
 		{
 			int input;

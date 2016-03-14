@@ -5,11 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-// Не могли бы Вы, пожалуйста, уточнить, что плохо со строками?
-// На что мне надо обратить внимание, над чем думать?
-
 namespace Regular_expressions1
 {
+	/// <summary>
+	/// Проверка корректности ввода логина
+	
+	/// Корректным логином считается строка от 2-х до 10-ти символов, 
+	/// содержащая только буквы и цифры, и при этом цифра не может быть первой
+	/// </summary>
+	
 	class Program
 	{
 		static void Main(string[] args)
@@ -19,11 +23,11 @@ namespace Regular_expressions1
 			while (true)
 			{
 				Console.Clear();
-				Console.Write(string.Format("Press:\n {0} {1} {2} {3}",
-								  "1 to add logins by yoursels\n",
-								  "2 to get logins out of file\n",
-								  "0 to exit\n\n",
-								  "Your choice: "));
+				Console.WriteLine("Press:");
+				Console.WriteLine("  1 to add logins by yoursels");
+				Console.WriteLine("  2 to get logins out of file");
+				Console.WriteLine("  0 to exit\n");
+				Console.Write("Your choice: ");
 
 				switch (Console.ReadKey().KeyChar)
 				{
@@ -45,6 +49,10 @@ namespace Regular_expressions1
 			}
 		}
 
+		/// <summary>
+		/// Пльзовательский ввод логинов с консоли и проверка корректности
+		/// </summary>
+		/// <param name="loginMask"></param>
 		static void UserInput(Regex loginMask)
 		{
 			Console.Clear();
@@ -66,6 +74,10 @@ namespace Regular_expressions1
 			} while (Console.ReadKey().Key != ConsoleKey.Escape);
 
 		}
+		/// <summary>
+		/// Считывание логинов из файла Login.txt для проверка их корректности
+		/// </summary>
+		/// <param name="loginMask"></param>
 		static void FileInput(Regex loginMask)
 		{
 			Console.Clear();
@@ -90,6 +102,11 @@ namespace Regular_expressions1
 
 			Console.ReadKey();
 		}
+		/// <summary>
+		/// Вывод на консоль строки text цветом color
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="color"></param>
 		static void PrintColorText(string text, ConsoleColor color)
 		{
 			Console.ForegroundColor = color;

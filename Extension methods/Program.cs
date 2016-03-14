@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace Extension_methods
 {
+	/// <summary>
+	/// Пример использования метода расширения <see cref = "CollectionToString"/>
+	/// </summary>
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			// пример использования IListToString
-			int number = Input("Number of elements");
+			int number = InputCollectionLength("Number of elements");
 			double[] doubleArr = new double[number];
 
 			for (int i = 0; i < number; i++)
@@ -21,7 +23,12 @@ namespace Extension_methods
 			Console.ReadKey();
 		}
 
-		static public int Input(string text)
+		/// <summary>
+		/// Безопасный ввод с консоли числа элементов коллекции
+		/// </summary>
+		/// <param name="text">Используется в качестве приглашения для ввода</param>
+		/// <returns>Число типа int больше 0</returns>
+		static public int InputCollectionLength(string text)
 		{
 			int number;
 			while (true)
@@ -32,6 +39,11 @@ namespace Extension_methods
 				Console.WriteLine("Wrong input. Try again\n");
 			}
 		}
+		/// <summary>
+		/// Безопасный ввод с консоли числа с плавающей точкой больше 0
+		/// </summary>
+		/// <param name="text"></param>
+		/// <param name="doubleX"></param>
 		static public void Input(string text, ref double doubleX)
 		{
 			while (true)
